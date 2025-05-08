@@ -1,13 +1,13 @@
 [user]
-	email = artem.shevchenko@plummygames.com
-	name = artemplummy
+	email = jan.hof@ibm.com
+	name = jan.hof
 	signingkey = ~/.ssh/work.pub
 
 [github]
-	user = "artemplummy"
+	user = "jan.hof"
 
 [bitbucket]
-	user = "artemplummy"
+	user = "jan.hof"
 
 [core]
 	sshCommand = "ssh -i ~/.ssh/work"

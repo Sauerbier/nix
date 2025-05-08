@@ -20,7 +20,7 @@
         formats = [ "html" "json" ];
       };
     };
-    environmentFile = "${config.users.users.xnm.home}/.config/.env.searxng"; # FIXME: The location of the `.env` file where you need to set up the key
+    environmentFile = "${config.users.users.jan.home}/.config/.env.searxng"; # FIXME: The location of the `.env` file where you need to set up the key
   };
 
   services.open-webui = {

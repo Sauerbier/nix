@@ -19,7 +19,7 @@
   #     daemon.settings.features.cdi = true;
   #   };
   # };
-  # users.extraGroups.docker.members = [ "xnm" ];
+  # users.extraGroups.docker.members = [ "jan" ];
 
 
   # Enable Podman
@@ -34,7 +34,7 @@
     defaultNetwork.settings.dns_enabled = true;
   };
   environment.variables.DBX_CONTAINER_MANAGER = "podman";
-  users.extraGroups.podman.members = [ "xnm" ];
+  users.extraGroups.podman.members = [ "jan" ];
 
   environment.systemPackages = with pkgs; [
     nvidia-docker
