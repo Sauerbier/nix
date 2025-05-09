@@ -1,8 +1,8 @@
 [include]
 	path = ~/.config/delta/catppuccin.gitconfig
 
-[includeIf "gitdir:~/projects/"]
-	path = ~.gitconfig.personal
+[include]
+	path = ~/.gitconfig.personal
 
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig.work
