@@ -21,7 +21,7 @@
         # ./clamav-scanner.nix
         # ./yubikey.nix
         ./sound.nix
-        ./usb.nix
+        # ./usb.nix
         ./keyboard.nix
         ./time.nix
         ./swap.nix
