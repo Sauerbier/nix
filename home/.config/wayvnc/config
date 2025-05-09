@@ -1,0 +1,5 @@
+use_relative_paths=true
+address=0.0.0.0
+enable_auth=false
+private_key_file=tls_key.pem
+certificate_file=tls_cert.pem

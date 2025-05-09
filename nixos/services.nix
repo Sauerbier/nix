@@ -54,7 +54,6 @@
     avizo
     wlogout
     gifsicle
-    tigervnc
     vim
   ];
 }
