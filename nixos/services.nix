@@ -25,7 +25,7 @@
   services.tumbler.enable = true; 
   services.fwupd.enable = true;
   services.auto-cpufreq.enable = true;
-  ervices.usbguard.enable = false;
+  services.usbguard.enable = false;
   # services.gnome.core-shell.enable = true;
   # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
@@ -55,5 +55,6 @@
     wlogout
     gifsicle
     tigervnc
+    vim
   ];
 }

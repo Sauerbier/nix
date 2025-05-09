@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+REPO_PATH="."
+
 set -euo pipefail
 
 if [ ! -d "$REPO_PATH/home" ]; then
@@ -7,8 +9,8 @@ if [ ! -d "$REPO_PATH/home" ]; then
   exit 1
 fi
 
-if [ ! -d "$REPO_PATH/nix" ]; then
-  echo "Error: '$REPO_PATH/nix' directory not found in repository."
+if [ ! -d "$REPO_PATH/nixos" ]; then
+  echo "Error: '$REPO_PATH/nixos' directory not found in repository."
   exit 1
 fi
 
@@ -27,11 +29,12 @@ echo "Syncing home configuration to $HOME..."
 rsync -avh --exclude=".git" "$REPO_PATH/home/" "$HOME/"
 
 echo "Syncing nixos configuration to /etc/nixos/..."
-sudo rsync -avh "$REPO_PATH/nix/" "/etc/nixos/"
+sudo rsync -avh "$REPO_PATH/nixos/" "/etc/nixos/"
 
 # Run nswitchu to apply configuration
 echo "Applying NixOS configuration with nswitchu..."
-sudo nswitchu
+sudo nix flake update --flake /etc/nixos
+sudo nixos-rebuild switch --flake /etc/nixos#thor --upgrade
 
 echo "NixOS configuration applied successfully!"
-echo "Backups stored in: $BACKUP_DIR
+echo "Backups stored in: $BACKUP_DIR"

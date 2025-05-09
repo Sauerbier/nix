@@ -14,8 +14,8 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
-        ./nvidia.nix
-        # ./disable-nvidia.nix
+        #./nvidia.nix
+        ./disable-nvidia.nix
         ./opengl.nix
         # ./fingerprint-scanner.nix
         # ./clamav-scanner.nix
@@ -49,7 +49,7 @@
         ./open-ssh.nix
         ./mosh.nix
         ./firewall.nix
-        ./dns.nix
+        #./dns.nix
         # ./vpn.nix
         ./users.nix
         ./virtualisation.nix
