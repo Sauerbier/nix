@@ -2,7 +2,7 @@
 	path = ~/.config/delta/catppuccin.gitconfig
 
 [includeIf "gitdir:~/projects/"]
-	path = ~/projects/.gitconfig.personal
+	path = ~.gitconfig.personal
 
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig.work
@@ -15,7 +15,7 @@
 	format = ssh
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [interactive]
     diffFilter = delta --color-only
