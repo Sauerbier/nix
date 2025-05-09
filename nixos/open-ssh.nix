@@ -9,6 +9,7 @@
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "jan" ];
+      PubKeyAuthentication = "yes";
     };
   };
 }
