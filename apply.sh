@@ -21,15 +21,15 @@ mkdir -p "$BACKUP_DIR/home" "$BACKUP_DIR/nixos"
 
 # Backup current configurations
 echo "Creating backups in $BACKUP_DIR..."
-rsync -av --exclude=".nixos_config_backups" "$HOME/" "$BACKUP_DIR/home/"
+rsync -av --exclude=".nixos_config_backups" --exclude=".cache" "$HOME/" "$BACKUP_DIR/home/"
 sudo rsync -av "/etc/nixos/" "$BACKUP_DIR/nixos/"
 
 # Sync repository files to system
 echo "Syncing home configuration to $HOME..."
-rsync -avh --exclude=".git" "$REPO_PATH/home/" "$HOME/"
+rsync -avh --exclude=".git" --exclude=".cache" "$REPO_PATH/home/" "$HOME/"
 
 echo "Syncing nixos configuration to /etc/nixos/..."
-sudo rsync -avh "$REPO_PATH/nixos/" "/etc/nixos/"
+sudo rsync -avh --exclude=".cache" "$REPO_PATH/nixos/" "/etc/nixos/"
 
 # Run nswitchu to apply configuration
 echo "Applying NixOS configuration with nswitchu..."
